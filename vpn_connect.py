@@ -8,15 +8,27 @@ import sys, time
 import subprocess
 from requests  import get
 from pathlib import Path
+import grp
 
 #verify if vpn file exists
 
-ovpn = Path("/home/xtify/client1.ovpn")
+ovpn = Path("/home/djb/client1.ovpn")
 if ovpn.is_file():
     print ("ovpn file found proceeding.." "\n")
     time.sleep(3)
 else:
     print ("ovpn file not found" "\n")
+
+#nobody group needs to be added if not already created
+
+try:
+    grp.getgrnam('nobody')
+except keyError:
+     print('group nobody not found' "\n")
+else:
+    print('creating nobody group' "\n")
+    subprocess.Popen("groupadd nobody", shell=True)
+    time.sleep(3)
 
 def vpnconnect():
     print("executing vpn connect script" "\n")
