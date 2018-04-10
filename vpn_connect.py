@@ -12,7 +12,7 @@ import grp
 
 #verify if vpn file exists
 
-ovpn = Path("/home/djb/client1.ovpn")
+ovpn = Path("/home/${USER}/client1.ovpn")
 if ovpn.is_file():
     print ("ovpn file found proceeding.." "\n")
     time.sleep(3)
