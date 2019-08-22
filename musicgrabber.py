@@ -8,7 +8,7 @@ import sys
 import time
 
 #open song file
-song_file = open('/mnt/data/ent/musiclist.txt', 'w')
+song_file = open('#enter path of file youtube-dl link file', 'w')
 
 #enter song  input
 song_list = []
