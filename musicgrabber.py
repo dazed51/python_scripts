@@ -6,9 +6,10 @@
 import os
 import sys
 import time
+import subprocess
 
 #open song file
-song_file = open('#enter path of file youtube-dl link file', 'w')
+song_file = open('/mnt/data/ent/musiclist.txt', 'w')
 
 #enter song  input
 song_list = []
@@ -31,8 +32,10 @@ TODO:
 if song has 5 songs, then yes songs are there
 else, no songs in file see what wrong
 '''
-#TODO: call youtube-dl to extract audio
+#TODO: write songs extracted mp3 to file
 time.sleep(2)
 print("extracting mp3 from list of youtube lists using youtube-dl")
-os
-    
+subprocess.Popen("youtube-dl -x  --audio-format mp3 --batch-file='musiclist.txt'", shell=True)
+time.sleep(2)
+
+
