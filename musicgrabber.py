@@ -9,7 +9,7 @@ import time
 import subprocess
 
 #open song file
-song_file = open('/mnt/data/ent/musiclist.txt', 'w')
+song_file = open('path to music file', 'w')
 
 #enter song  input
 song_list = []
